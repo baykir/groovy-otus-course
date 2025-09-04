@@ -44,9 +44,11 @@ jobs:
           check-latest: true
       - uses: gradle/actions/setup-gradle@v4
       - name: Grand execute permission for gradlew
-        run: chmod +x ./Groovy-developer/gradlew
+        run: chmod +x ./gradlew
+        working-directory: Groovy-developer
       - name: Test with Gradle
-        run: ./Groovy-developer/gradlew test
+        run: ./gradlew test
+        working-directory: Groovy-developer
         timeout-minutes: 60
       - name: Upload reports
         uses: actions/upload-artifact@v4
