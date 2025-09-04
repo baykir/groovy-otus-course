@@ -43,6 +43,8 @@ jobs:
           java-version: ${{ matrix.java }}
           check-latest: true
       - uses: gradle/actions/setup-gradle@v4
+      - name: Grand execute permission for gradlew
+        run: chmod +x ./Groovy-developer/gradlew
       - name: Test with Gradle
         run: ./Groovy-developer/gradlew test
         timeout-minutes: 60
