@@ -44,7 +44,7 @@ jobs:
           check-latest: true
       - uses: gradle/actions/setup-gradle@v4
       - name: Test with Gradle
-        run: ./gradlew test
+        run: ./Groovy-developer/gradlew test
         timeout-minutes: 60
       - name: Upload reports
         uses: actions/upload-artifact@v4
